@@ -5,6 +5,7 @@ This repository contains two utilities- one for consuming messages and the other
 
 *Usage*
 =======
+Consumer
 ```
 go run amqpclient.go --help
 
@@ -22,7 +23,16 @@ Usage of ./amqpclient:
   -queue-declare=false: Declare Queue true|false
   -uri="amqp://guest:guest@localhost:5672/": AMQP URI
 ```
-  
+Producer
+```
+Usage of /tmp/go-build278233220/command-line-arguments/_obj/a.out:
+  -body="foobar": Body of message
+  -exchange="cloud-init": Durable AMQP exchange name
+  -exchange-type="fanout": Exchange type - direct|fanout|topic|x-custom
+  -key="cloudinit-key": AMQP routing key
+  -reliable=true: Wait for the publisher confirmation before exiting
+  -uri="amqp://guest:guest@localhost:5672/": AMQP URI
+```
   
 *How to Build*
 ==============
